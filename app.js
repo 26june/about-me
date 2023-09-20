@@ -16,11 +16,11 @@ function quiz() {
   }
 
   if (locationQuestion === "yes") {
-    console.log("User answered question correctly");
+    // console.log("User answered question correctly");
     alert("You answered the question correct");
     score++;
   } else {
-    console.log("User answered question incorrectly");
+    // console.log("User answered question incorrectly");
     alert("You answered the question incorrectly");
   }
 
@@ -34,11 +34,11 @@ function quiz() {
   }
 
   if (workQuestion === "no") {
-    console.log("User answered question correctly");
+    // console.log("User answered question correctly");
     alert("You answered the question correct");
     score++;
   } else {
-    console.log("User answered question incorrectly");
+    // console.log("User answered question incorrectly");
     alert("You answered the question incorrectly");
   }
 
@@ -52,11 +52,11 @@ function quiz() {
   }
 
   if (filmQuestion === "yes") {
-    console.log("User answered question correctly");
+    // console.log("User answered question correctly");
     alert("You answered the question correct");
     score++;
   } else {
-    console.log("User answered question incorrectly");
+    // console.log("User answered question incorrectly");
     alert("You answered the question incorrectly");
   }
 
@@ -68,11 +68,11 @@ function quiz() {
   }
 
   if (ageQuestion === "no") {
-    console.log("User answered question correctly");
+    // console.log("User answered question correctly");
     alert("You answered the question correct");
     score++;
   } else {
-    console.log("User answered question incorrectly");
+    // console.log("User answered question incorrectly");
     alert("You answered the question incorrectly");
   }
 
@@ -82,17 +82,17 @@ function quiz() {
 
   while (musicQuestion !== "yes" && musicQuestion !== "no") {
     alert("Please answer yes or no");
-    musicuestion = prompt(
+    musicQuestion = prompt(
       "Have I recently listened to 'Where I'm Meant To Be' by Ezra Collective?"
     );
   }
 
   if (musicQuestion === "yes") {
-    console.log("User answered question correctly");
+    // console.log("User answered question correctly");
     alert("You answered the question correct");
     score++;
   } else {
-    console.log("User answered question incorrectly");
+    // console.log("User answered question incorrectly");
     alert("You answered the question incorrectly");
   }
 
@@ -101,12 +101,35 @@ function quiz() {
   alert("Well done, you answered " + score + " out of 5 correct!");
 }
 
+function darkMode() {
+  let element = document.body;
+  element.classList.toggle("dark-mode");
+}
+
 // function darkMode() {
 //   document.body.style.backgroundColor = "black";
 //   document.body.style.color = "white";
 // }
 
-function darkMode() {
-  let element = document.body;
-  element.classList.toggle("dark-mode");
+function numberGuess() {
+  let correctAnswer = 6;
+
+  for (i = 0; i < 4; i++) {
+    console.log("loop couter");
+    let userGuess = prompt(
+      "guess a number between 1 and 10, you have four attempts"
+    );
+    if (parseInt(userGuess) === correctAnswer) {
+      alert("correct");
+      break;
+    } else if (userGuess < correctAnswer) {
+      alert("too low, try again");
+    } else {
+      alert("too high, try again");
+    }
+  }
+
+  if (i === 4) {
+    alert("sorry, you are all out of guesses.");
+  }
 }
