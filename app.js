@@ -1,7 +1,7 @@
-// function greeting() {
-//   let userName = prompt("What is your name?");
-//   document.write("Hello " + userName + ", welcome.");
-// }
+function greeting() {
+  let userName = prompt("What is your name?");
+  document.write("Hello " + userName + ", welcome.");
+}
 
 function quiz() {
   let score = 0;
