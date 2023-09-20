@@ -6,51 +6,94 @@ function greeting() {
 function quiz() {
   let score = 0;
 
-  let locationQuestion = confirm("Is it true I live in Oxfordshire?");
+  let locationQuestion = prompt(
+    "Is it true I live in Oxfordshire?"
+  ).toLowerCase();
 
-  if (locationQuestion === true) {
-    console.log("user is correct");
-    score++;
-  } else {
-    console.log("user is false");
+  while (locationQuestion !== "yes" && locationQuestion !== "no") {
+    alert("Please answer yes or no");
+    locationQuestion = prompt("Is it true I live in Oxfordshire?");
   }
 
-  let workQuestion = confirm("Is it true that I have worked as a pilot?");
-
-  if (workQuestion === false) {
-    console.log("user is correct");
+  if (locationQuestion === "yes") {
+    console.log("User answered question correctly");
+    alert("You answered the question correct");
     score++;
   } else {
-    console.log("user is false");
+    console.log("User answered question incorrectly");
+    alert("You answered the question incorrectly");
   }
 
-  let filmQuestion = confirm("Have I recently watched Asteroid City?");
+  let workQuestion = prompt(
+    "Is it true that I have worked as a pilot?"
+  ).toLowerCase();
 
-  if (filmQuestion === true) {
-    console.log("user is correct");
-    score++;
-  } else {
-    console.log("user is false");
+  while (workQuestion !== "yes" && workQuestion !== "no") {
+    alert("Please answer yes or no");
+    workQuestion = prompt("Is it true that I have worked as a pilot?");
   }
 
-  let ageQuestion = confirm("Is it true I am 12 years old?");
-
-  if (ageQuestion === false) {
-    console.log("user is correct");
+  if (workQuestion === "no") {
+    console.log("User answered question correctly");
+    alert("You answered the question correct");
     score++;
   } else {
-    console.log("user is false");
+    console.log("User answered question incorrectly");
+    alert("You answered the question incorrectly");
   }
 
-  let musicQuestion = confirm(
-    "Have I recently listened to 'Where I'm Meant To Be' by Ezra Collective ?"
-  );
+  let filmQuestion = prompt(
+    "Have I recently watched Asteroid City?"
+  ).toLowerCase();
 
-  if (musicQuestion === true) {
-    console.log("user is correct");
+  while (filmQuestion !== "yes" && filmQuestion !== "no") {
+    alert("Please answer yes or no");
+    filmQuestion = prompt("Have I recently watched Asteroid City?");
+  }
+
+  if (filmQuestion === "yes") {
+    console.log("User answered question correctly");
+    alert("You answered the question correct");
     score++;
   } else {
-    console.log("user is false");
+    console.log("User answered question incorrectly");
+    alert("You answered the question incorrectly");
+  }
+
+  let ageQuestion = prompt("Is it true I am 12 years old?").toLowerCase();
+
+  while (ageQuestion !== "yes" && ageQuestion !== "no") {
+    alert("Please answer yes or no");
+    ageQuestion = prompt("Is it true I am 12 years old?");
+  }
+
+  if (ageQuestion === "no") {
+    console.log("User answered question correctly");
+    alert("You answered the question correct");
+    score++;
+  } else {
+    console.log("User answered question incorrectly");
+    alert("You answered the question incorrectly");
+  }
+
+  let musicQuestion = prompt(
+    "Have I recently listened to 'Where I'm Meant To Be' by Ezra Collective?"
+  ).toLowerCase();
+
+  while (musicQuestion !== "yes" && musicQuestion !== "no") {
+    alert("Please answer yes or no");
+    musicuestion = prompt(
+      "Have I recently listened to 'Where I'm Meant To Be' by Ezra Collective?"
+    );
+  }
+
+  if (musicQuestion === "yes") {
+    console.log("User answered question correctly");
+    alert("You answered the question correct");
+    score++;
+  } else {
+    console.log("User answered question incorrectly");
+    alert("You answered the question incorrectly");
   }
 
   alert("You have completed the quiz!");
@@ -64,6 +107,6 @@ function quiz() {
 // }
 
 function darkMode() {
-  var element = document.body;
+  let element = document.body;
   element.classList.toggle("dark-mode");
 }
