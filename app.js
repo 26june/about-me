@@ -112,20 +112,20 @@ function numberGuess() {
   for (i = 0; i < 4; i++) {
     console.log("loop couter");
     let userGuess = prompt(
-      "guess a number between 1 and 10, you have four attempts"
+      "Guess a number between 1 and 10, you have four attempts"
     );
     if (parseInt(userGuess) === correctAnswer) {
-      alert("correct");
+      alert("Well done! That's correct!");
       break;
     } else if (userGuess < correctAnswer) {
-      alert("too low, try again");
+      alert("That number is too low, try again");
     } else {
-      alert("too high, try again");
+      alert("That number is too high, try again");
     }
   }
 
   if (i === 4) {
-    alert("sorry, you are all out of guesses.");
+    alert("Sorry you're not a winner. 👏 👏 👏 ");
   }
 }
 
