@@ -1,7 +1,7 @@
-function greeting() {
-  let userName = prompt("What is your name?");
-  document.write("Hello " + userName + ", welcome.");
-}
+// function greeting() {
+//   let userName = prompt("What is your name?");
+//   document.write("Hello " + userName + ", welcome.");
+// }
 
 function quiz() {
   let score = 0;
@@ -106,11 +106,6 @@ function darkMode() {
   element.classList.toggle("dark-mode");
 }
 
-// function darkMode() {
-//   document.body.style.backgroundColor = "black";
-//   document.body.style.color = "white";
-// }
-
 function numberGuess() {
   let correctAnswer = 6;
 
@@ -131,5 +126,22 @@ function numberGuess() {
 
   if (i === 4) {
     alert("sorry, you are all out of guesses.");
+  }
+}
+
+function foodGuess() {
+  let correctAnswers = ["cheesecake", "apple pie", "chocolate brownie"];
+
+  for (i = 0; i < 6; i++) {
+    let userAnswer = prompt(
+      "What are my favourite desserts? You have six attempts."
+    ).toLowerCase();
+    if (correctAnswers.indexOf(userAnswer) === -1) {
+      console.log("loop couter");
+      alert("Nope, it's not that. Try again!");
+    } else {
+      alert("Yes, correct. I love " + userAnswer + ".");
+      break;
+    }
   }
 }
