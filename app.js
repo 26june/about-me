@@ -133,9 +133,9 @@ function numberGuess() {
 function foodGuess() {
   let correctAnswers = ["cheesecake", "apple pie", "chocolate brownie"];
 
-  for (i = 0; i < 6; i++) {
+  for (i = 6; i > 0; i--) {
     let userAnswer = prompt(
-      "What are my favourite desserts? You have six attempts."
+      `What are my favourite desserts? You have ${i} attempts.`
     ).toLowerCase();
     if (correctAnswers.indexOf(userAnswer) === -1) {
       console.log("loop couter");
