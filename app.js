@@ -145,6 +145,11 @@ function foodGuess() {
       break;
     }
   }
+
+  if (i === 0) {
+    alert("Sorry you're not a winner. 👏 👏 👏 ");
+    alert(`The correct answers were: ${correctAnswers}`);
+  }
 }
 
 window.onscroll = function () {
