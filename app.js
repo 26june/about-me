@@ -148,9 +148,9 @@ function foodGuess() {
 }
 
 window.onscroll = function () {
-  if (scrollY > 310) {
-    document.getElementById("showHideButton").style.display = "block";
-  } else {
+  if (scrollY <= 310) {
     document.getElementById("showHideButton").style.display = "none";
+  } else if (scrollY > 310) {
+    document.getElementById("showHideButton").style.display = "block";
   }
 };
