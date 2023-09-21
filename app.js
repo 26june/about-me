@@ -146,3 +146,11 @@ function foodGuess() {
     }
   }
 }
+
+window.onscroll = function () {
+  if (scrollY > 310) {
+    document.getElementById("showHideButton").style.display = "block";
+  } else {
+    document.getElementById("showHideButton").style.display = "none";
+  }
+};
