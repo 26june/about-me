@@ -126,6 +126,7 @@ function numberGuess() {
 
   if (i === 4) {
     alert("Sorry you're not a winner. 👏 👏 👏 ");
+    alert("The correct answer was 7.");
   }
 }
 
